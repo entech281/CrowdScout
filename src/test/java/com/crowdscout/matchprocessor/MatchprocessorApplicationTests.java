@@ -1,4 +1,4 @@
-package com.openscouting.matchprocessor;
+package com.crowdscout.matchprocessor;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

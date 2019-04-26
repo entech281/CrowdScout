@@ -1,4 +1,4 @@
-package com.openscouting.matchprocessor;
+package com.crowdscout.matchprocessor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

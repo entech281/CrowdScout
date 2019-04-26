@@ -1,4 +1,4 @@
-package com.openscouting.matchprocessor;
+package com.crowdscout.matchprocessor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,6 +12,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity security) throws Exception
     {
-     security.httpBasic().disable();
+        security.httpBasic().disable();
     }
 }
