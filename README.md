@@ -1,12 +1,12 @@
 # CrowdScout
+It's not just any other scouting application. 
 
-CrowdScout is (or will be) an FRC scouting application. But it's not just any other scouting application. 
 The old method of scouting is that your team collects all the data it wants from all the matches it scouts,
-and every other team at the compitition does likewise.
+and every other team at the compitition does the same thing. Each team that scouts collects the same data as every other team.
 
-The innovation of CrowdScout is that instead of each team collecting the same data as every other team, all teams
-in an FRC compitition contribute to the same data source. During each match, there will be three scouts from different 
-teams watching the same robot, so that if an assigned scout makes a mistake, CrowdScout can know which the correct data.
+  The innovation of CrowdScout is that all the teams sign up to contribute to the same data source, and at the end, they all recieve the data that everyone generated. This approach means less scouting and more data. CrowdScout will also have more than one scout watching a single robot during a match, so that even if one of the scouts misses something, CrowdScout will still have the correct data. Finally CrowdScout will collect more information in an easier format, so you can focus on the game, and not on filling out a form.
 
-So, if there are nine teams that sign up for CrowdScout for a competition, each team only has to scout 1/3 of the time. 
-This approach gives better data, and gives your team more time to do what they love.
+  So, if there are nine teams that sign up for CrowdScout at a competition, that's about 720 match records, merged into 240 detailed match profiles. There will also be an analysis on every team, and a pick list helper. 
+
+
+If your interested in helping, drop our team a line at entechrobotics(at)gmail.com. We'd love to have you on our project.
