@@ -26,8 +26,16 @@ dependencies {
 	implementation 'org.springframework.session:spring-session-core'
 	compileOnly 'org.projectlombok:lombok'
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile 'org.json:json:20171018'
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
+
+task copyJson(type: Copy) {
+    from file("$buildDir/src/main/java/com/crowdscout/model/gameconfiguration/GameConfig.json")
+    into file("$buildDir")
+}
+
+build.dependsOn copyJson

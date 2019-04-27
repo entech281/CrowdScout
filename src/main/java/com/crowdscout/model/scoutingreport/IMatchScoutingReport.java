@@ -1,4 +1,4 @@
-package com.crowdscout.model;
+package com.crowdscout.model.scoutingreport;
 
 public interface IMatchScoutingReport{
     
