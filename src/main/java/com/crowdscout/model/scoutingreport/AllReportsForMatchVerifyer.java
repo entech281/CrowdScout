@@ -10,5 +10,5 @@ public abstract class AllReportsForMatchVerifyer {
         allReportVerifiers.add(this);
     }
 
-    public abstract List<IMatchScoutingReport> WhichReportsAreValid(IMatchScoutingReport ... reports);
+    public abstract List<MatchScoutingReportVerifier> WhichReportsAreValid(MatchScoutingReportVerifier ... reports);
 }

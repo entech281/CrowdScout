@@ -1,12 +1,12 @@
-package com.crowdscout.model.gameconfiguration.gamecomponents;
+package com.crowdscout.model.gameconfiguration.components;
 
 
 public class GameResourceDestination{
 
-    private String resourceName;
-    private String resourceType;
-    private int minAmount;
-    private int maxAmount;
+    private final String resourceName;
+    private final String resourceType;
+    private final int minAmount;
+    private final int maxAmount;
 
     public GameResourceDestination( String resourceName, String resourceType, int minAmount, int maxAmount) {
         this.resourceName = resourceName;

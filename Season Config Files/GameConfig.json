@@ -126,12 +126,5 @@
             "name":"other robots",
             "max": 2
         }
-    ],
-    "penalties":[     
-            "foul",
-            "technical foul",
-            "yellow card",
-            "red card"      
     ]
-
 }

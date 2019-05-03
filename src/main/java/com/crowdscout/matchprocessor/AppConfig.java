@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import com.crowdscout.model.gameconfiguration.GameConfigParser;
-import com.crowdscout.model.gameconfiguration.gamecomponents.GameResourceDestination;
 
 import org.json.JSONException;
 import org.springframework.context.annotation.Bean;
@@ -19,9 +18,9 @@ public class AppConfig {
 
         GameConfigParser g = new GameConfigParser();
 
-        for (GameResourceDestination grd : g.getDestinations()) {
+        g.getDestinations().forEach((grd) -> {
             System.out.println(grd.getResourceName());
-        }
+        });
     
         return g;
    }
