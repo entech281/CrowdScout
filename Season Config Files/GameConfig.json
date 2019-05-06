@@ -6,31 +6,31 @@
     },
     "game actions":[
         {
-            "name": "sandstorm cargo hatch",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 4,
+            "name":"sandstorm cargo hatch",
+            "type":"resource destination",
+            "min" :0,
+            "max":4,
             "resource":"hatch",
             "points per placement":5
         },
         {
-            "name": "cargo hatch",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 12,
+            "name":"cargo hatch",
+            "type":"resource destination",
+            "min" :0,
+            "max":12,
             "resource":"hatch",
             "points per placement":2
         },
         {
-            "name": "rocket level 1 hatch",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 12,
+            "name":"rocket level 1 hatch",
+            "type":"resource destination",
+            "min" :0,
+            "max":12,
             "resource":"hatch",
             "points per placement":2
         },
         {
-            "name": "rocket level 2 hatch",
+            "name":"rocket level 2 hatch",
             "type":"resource destination",
             "min":0,
             "max":4,
@@ -38,7 +38,7 @@
             "points per placement":2
         },
         {
-            "name": "rocket level 3 hatch",
+            "name":"rocket level 3 hatch",
             "type":"resource destination",
             "min":0,
             "max":4,
@@ -46,71 +46,65 @@
             "points per placement":2
         },
         {
-            "name": "cargo ship cargo",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 12,
+            "name":"cargo ship cargo",
+            "type":"resource destination",
+            "min" :0,
+            "max":12,
             "resource":"cargo",
             "points per placement":3
         },
         {
-            "name": "rocket level 1 cargo",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 4,
+            "name":"rocket level 1 cargo",
+            "type":"resource destination",
+            "min" :0,
+            "max":4,
             "resource":"cargo",
             "points per placement":3
         },
         {
-            "name": "rocket level 2 cargo",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 4,
+            "name":"rocket level 2 cargo",
+            "type":"resource destination",
+            "min" :0,
+            "max":4,
             "resource":"cargo",
             "points per placement":3
         },
         {
-            "name": "rocket level 3 cargo",
-            "type": "resource destination",
-            "min" : 0,
-            "max": 4,
+            "name":"rocket level 3 cargo",
+            "type":"resource destination",
+            "min" :0,
+            "max":4,
             "resource":"cargo",
             "points per placement":3
         },
         {
-            "name": "level 3 climb",
-            "type": "one time action",
-            "max attemptors": 3
+            "name":"level 3 climb",
+            "type":"one time action",
+            "max attemptors":3
         },
         {
-            "name": "level 2 climb",
-            "type": "one time action",
-            "max attemptors": 3
+            "name":"level 2 climb",
+            "type":"one time action",
+            "max attemptors":3
         },
         {
-            "name": "level 3 climb helper",
-            "type": "resource destination",
-            "min":0,
-            "max":2,
-            "resource":"other robots"
+            "name":"level 3 climb assist",
+            "type":"assist"
         },
         {
-            "name": "level 2 climb helper",
-            "type": "resource destination",
-            "min":0,
-            "max":2,
-            "resource":"other robots"
+            "name":"level 2 climb assist",
+            "type":"assist"
         },
         {
-            "name": "level 2 start",
-            "type": "one time action",
+            "name":"level 2 start",
+            "type":"one time action",
             "max attemptors":2
         },
         {
-            "name": "level 1 start",
+            "name":"level 1 start",
             "min attemptors":1,
             "max attemptors":3,
-            "type": "one time action"
+            "type":"one time action"
         }
     ],
     "resources":[
@@ -121,10 +115,6 @@
         {
             "name":"hatch",
             "max":50
-        },
-        {
-            "name":"other robots",
-            "max": 2
         }
     ]
 }

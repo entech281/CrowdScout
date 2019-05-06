@@ -1,4 +1,4 @@
-package com.crowdscout.model.scoutingreport;
+package com.crowdscout.model.scoutingreport.verifiers;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,18 +1,18 @@
 package com.crowdscout.model.gameconfiguration.components;
 
-public class GameOneTimeActionPerRobot{
+public class OneTimeActionPerRobot{
     private final String name;
 
     private final int minAttemptors;
     private final int maxAttemptors;
 
-    public GameOneTimeActionPerRobot( String name, int maxAttemptors ) {
+    public OneTimeActionPerRobot( String name, int maxAttemptors ) {
         this.name = name;
         this.minAttemptors = 0;
         this.maxAttemptors = maxAttemptors;
     }
 
-    public GameOneTimeActionPerRobot( String name, int minAttemptors, int maxAttemptors ) {
+    public OneTimeActionPerRobot( String name, int minAttemptors, int maxAttemptors ) {
         this.name = name;
         this.minAttemptors = minAttemptors;
         this.maxAttemptors = maxAttemptors;
