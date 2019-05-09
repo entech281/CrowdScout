@@ -1,28 +1,40 @@
 package com.crowdscout.model.gameconfiguration.components;
 
-public class OneTimeActionPerRobot{
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    private final int minAttemptors;
-    private final int maxAttemptors;
+@JsonAutoDetect
+public class OneTimeActionPerRobot {
+    @JsonProperty
+    private String name;
+    @JsonProperty("min attemptors")
+    private int minAttemptors;
+    @JsonProperty("max attemptors")
+    private int maxAttemptors;
+    @JsonProperty("points per succesful attempt")
+    private int successPoints;
 
-    public OneTimeActionPerRobot( String name, int maxAttemptors ) {
-        this.name = name;
-        this.minAttemptors = 0;
-        this.maxAttemptors = maxAttemptors;
-    }
+    public OneTimeActionPerRobot() {}
 
-    public OneTimeActionPerRobot( String name, int minAttemptors, int maxAttemptors ) {
+    public OneTimeActionPerRobot(String name, int minAttemptors, int maxAttemptors, int successPoints) {
         this.name = name;
         this.minAttemptors = minAttemptors;
         this.maxAttemptors = maxAttemptors;
+        this.successPoints = successPoints;
     }
 
     /**
-     * @return the maxAttemptors
+     * @return the sucessPoints
      */
-    public int getMaxAttemptors() {
-        return maxAttemptors;
+    public int getSuccessPoints() {
+        return successPoints;
+    }
+
+    /**
+     * @param successPoints the sucessPoints to set
+     */
+    public void setSuccessPoints(int successPoints) {
+        this.successPoints = successPoints;
     }
 
     /**
@@ -33,9 +45,40 @@ public class OneTimeActionPerRobot{
     }
 
     /**
+     * @param minAttemptors the minAttemptors to set
+     */
+    public void setMinAttemptors(int minAttemptors) {
+        this.minAttemptors = minAttemptors;
+    }
+
+    /**
+     * @return the maxAttemptors
+     */
+    public int getMaxAttemptors() {
+        return maxAttemptors;
+    }
+
+    /**
+     * @param maxAttemptors the maxAttemptors to set
+     */
+    public void setMaxAttemptors(int maxAttemptors) {
+        this.maxAttemptors = maxAttemptors;
+    }
+
+
+
+    /**
      * @return the name
      */
+    
     public String getName() {
         return name;
+    }
+
+    /**
+     * @return the name
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 }

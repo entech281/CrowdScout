@@ -1,21 +1,50 @@
 {
     "periods":{
         "sandstorm":15,
-        "teleop":110,
-        "endgame":25
+        "teleop":115,
+        "endgame":20
     },
-    "game actions":[
+    "start actions":[
         {
-            "name":"sandstorm cargo hatch",
-            "type":"resource destination",
-            "min" :0,
-            "max":4,
-            "resource":"hatch",
-            "points per placement":5
+            "name":"level 2 start",
+            "min attemptors":0,
+            "max attemptors":2,
+            "points per succesful attempt":6
         },
         {
-            "name":"cargo hatch",
-            "type":"resource destination",
+            "name":"level 1 start",
+            "min attemptors":1,
+            "max attemptors":3,
+            "points per succesful attempt":3
+        }
+    ],
+    "endgame actions":[
+        {
+            "name":"level 3 climb",
+            "min attemptors":0,
+            "max attemptors":3,
+            "points per succesful attempt":12
+        },
+        {
+            "name":"level 2 climb",
+            "min attemptors":0,
+            "max attemptors":3,
+            "points per succesful attempt":6
+        },
+        {
+            "name":"in HAB zone at end of game",
+            "min attemptors":0,
+            "max attemptors":3,
+            "points per succesful attempt":3
+        }
+    ],
+    "assistables":[
+        "level 2 climb",
+        "level 3 climb"
+    ],
+    "resource destinations":[
+        {
+            "name":"cargo ship hatch",
             "min" :0,
             "max":12,
             "resource":"hatch",
@@ -23,7 +52,6 @@
         },
         {
             "name":"rocket level 1 hatch",
-            "type":"resource destination",
             "min" :0,
             "max":12,
             "resource":"hatch",
@@ -31,7 +59,6 @@
         },
         {
             "name":"rocket level 2 hatch",
-            "type":"resource destination",
             "min":0,
             "max":4,
             "resource":"hatch",
@@ -39,7 +66,6 @@
         },
         {
             "name":"rocket level 3 hatch",
-            "type":"resource destination",
             "min":0,
             "max":4,
             "resource":"hatch",
@@ -47,7 +73,6 @@
         },
         {
             "name":"cargo ship cargo",
-            "type":"resource destination",
             "min" :0,
             "max":12,
             "resource":"cargo",
@@ -55,7 +80,6 @@
         },
         {
             "name":"rocket level 1 cargo",
-            "type":"resource destination",
             "min" :0,
             "max":4,
             "resource":"cargo",
@@ -63,7 +87,6 @@
         },
         {
             "name":"rocket level 2 cargo",
-            "type":"resource destination",
             "min" :0,
             "max":4,
             "resource":"cargo",
@@ -71,50 +94,24 @@
         },
         {
             "name":"rocket level 3 cargo",
-            "type":"resource destination",
             "min" :0,
             "max":4,
             "resource":"cargo",
             "points per placement":3
         },
         {
-            "name":"level 3 climb",
-            "type":"one time action",
-            "max attemptors":3
+            "name":"dropped hatch",
+            "resource":"hatch",
+            "points per placement":0
         },
         {
-            "name":"level 2 climb",
-            "type":"one time action",
-            "max attemptors":3
-        },
-        {
-            "name":"level 3 climb assist",
-            "type":"assist"
-        },
-        {
-            "name":"level 2 climb assist",
-            "type":"assist"
-        },
-        {
-            "name":"level 2 start",
-            "type":"one time action",
-            "max attemptors":2
-        },
-        {
-            "name":"level 1 start",
-            "min attemptors":1,
-            "max attemptors":3,
-            "type":"one time action"
+            "name":"dropped cargo",
+            "resource":"hatch",
+            "points per placement":0
         }
     ],
-    "resources":[
-        {
-            "name":"cargo",
-            "max":50
-        },
-        {
-            "name":"hatch",
-            "max":50
-        }
-    ]
+    "resources":{
+        "cargo":50,
+        "hatch":50
+    }
 }

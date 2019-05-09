@@ -25,6 +25,6 @@ public abstract class SingleScoutReportVerifier {
         int totalCorrect = 0; 
         for (SingleScoutReportVerifier checker : allReportVerifiers) 
             totalCorrect += checker.getValidityLikelyhood(report);
-        return ((double) totalCorrect) / allReportVerifiers.size();
+        return totalCorrect / allReportVerifiers.size();
     }
 }

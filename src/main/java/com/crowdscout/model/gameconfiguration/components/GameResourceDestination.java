@@ -1,18 +1,42 @@
 package com.crowdscout.model.gameconfiguration.components;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonAutoDetect
 public class GameResourceDestination{
 
-    private final String resourceName;
-    private final String resourceType;
-    private final int minAmount;
-    private final int maxAmount;
+    private String name;
+    private String resource;
+    @JsonProperty("min")
+    private int minAmount;
+    @JsonProperty("max")
+    private int maxAmount;
+    @JsonProperty("points per placement")
+    private int pointsPerPlacement;
 
-    public GameResourceDestination( String resourceName, String resourceType, int minAmount, int maxAmount) {
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
+    public GameResourceDestination(){}
+
+    public GameResourceDestination(String name, String resource, int minAmount, int maxAmount, int pointsPerPlacement) {
+        this.name = name;
+        this.resource = resource;
         this.minAmount = minAmount;
         this.maxAmount = maxAmount;
+        this.pointsPerPlacement = pointsPerPlacement;
+    }
+
+    /**
+     * @return the pointsPerPlacement
+     */
+    public int getPointsPerPlacement() {
+        return pointsPerPlacement;
+    }
+
+    /**
+     * @param pointsPerPlacement the pointsPerPlacement to set
+     */
+    public void setPointsPerPlacement(int pointsPerPlacement) {
+        this.pointsPerPlacement = pointsPerPlacement;
     }
 
     /**
@@ -23,6 +47,13 @@ public class GameResourceDestination{
     }
 
     /**
+     * @param maxAmount the maxAmount to set
+     */
+    public void setMaxAmount(int maxAmount) {
+        this.maxAmount = maxAmount;
+    }
+
+    /**
      * @return the minAmount
      */
     public int getMinAmount() {
@@ -30,18 +61,34 @@ public class GameResourceDestination{
     }
 
     /**
-     * @return the resourceType
+     * @param minAmount the minAmount to set
      */
-    public String getResourceType() {
-        return resourceType;
+    public void setMinAmount(int minAmount) {
+        this.minAmount = minAmount;
     }
 
     /**
-     * @return the resourceName
+     * @return the resource
      */
-    public String getResourceName() {
-        return resourceName;
+    public String getResource() {
+        return resource;
     }
 
+    /**
+     * @param resourceType the resourceType to set
+     */
+    public void setResource(String resource) {
+        this.resource = resource;
+    }
 
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
 }
