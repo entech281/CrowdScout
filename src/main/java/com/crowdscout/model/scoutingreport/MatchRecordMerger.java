@@ -16,7 +16,8 @@ public class MatchRecordMerger {
         
         List<Node> nodes = getNodesOnBestPath(report1.getEvents(), report2.getEvents());
         AlignEventLists(report1.getEvents(), report2.getEvents(), nodes);
-        return new MatchRecord(report1.getEvents());
+      
+        return new MatchRecord( MergeEventLists(report1.getEvents(), report2.getEvents()));
     }
 
     private static List<Node> getNodesOnBestPath(List<ReportedEvent> events1, List<ReportedEvent> events2){
@@ -115,17 +116,24 @@ public class MatchRecordMerger {
                     ( event1.getStartedTime() + event2.getStartedTime() ) / 2, 
                     (event1.getDuration() + event2.getDuration() ) / 2
                 ));
+            } else if(event1.getName().equals("missed")) {
+                finalReport.add(event2);
+            } else{
+                finalReport.add(event1);
             }
             
         }
         
-        return null;
+        return finalReport;
     }
 }
 
-
+/**
+ * Class used for merging algorithm.
+ * 
+ */
 class Node{
-
+    
     private int xCoord;
     private int yCoord;
 
